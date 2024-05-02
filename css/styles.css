@@ -66,7 +66,7 @@ body {
 #nav-list a:hover {
   background: #E7E7E7;
 }
-#nav-list a span {
+#nav-list a span { /* taille des glyph icons */
   font-size: 1.8em;
 }
 
@@ -141,29 +141,17 @@ body {
     height: 20px;
   }
 
-  #collapsable-nav a { /* Collapsed nav menu text */
+  #collapsable-nav a { /* Text size dans (collapsed) menu */
     font-size: 1.2em;
   }
-  #collapsable-nav a span { /* Collapsed nav menu glyph */
+  #collapsable-nav a span { /* Glyph size dans (collapsed) menu 
+    et vu que sa taille est héritée de celle du <a> du <nav> qui,
+    ci-dessus [collapsable-nav a] est à 1.2em, en mettant ce 1em,
+    on aura in fine la même taille, soit 1em fois 1.2em = 1.2em */
     font-size: 1em;
-    margin-right: 5px;
+    margin-right: 5px; /* pour séparer le glyph du texte */
   }
 
-  #call-btn > a {
-    font-size: 1.5em;
-    display: block;
-    margin: 0 20px;
-    padding: 10px;
-    border: 2px solid #fff;
-    background-color: #f6b319;
-    color: #951c49;
-  }
-  #xs-deliver {
-    margin-top: 5px;
-    font-size: .7em;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-  } 
 }
 
 /********************************/
