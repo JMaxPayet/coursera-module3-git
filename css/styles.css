@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* may not be useful --> Boostrap is supposed to take care of by default (border-box instead of content-box) */
 }
 
 body {
@@ -93,6 +93,17 @@ body {
 
 /* ********** END OF HEADER ********** */
 
+/* Stylisation des images Jumbotron pour toutes les tailles d'écran */
+
+.container .jumbotron {
+  box-shadow: 0 0 50px #3F0C1F;
+  border: 2px solid #3F0C1F;
+}
+
+
+
+
+
 
 /********************************/
 /*    MEDIA QUERIES SECTION     */
@@ -102,7 +113,10 @@ body {
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
-
+  .container .jumbotron {
+    background: url("../images/jumbotron_1200.jpg") no-repeat;
+    height: 675px; /* c'est la hauteur de l'image - on doit l'indiquer car une image de background n'affecte pas la taille de son contenant */
+  }
 }
 
 /********** Medium devices only **********/
@@ -115,11 +129,20 @@ body {
     height: 100px;
     margin: 5px 5px 5px 0;
   }
+
+  /* gestion de l'image Jumbotron à cette taille d'écran */
+  .container .jumbotron {
+    background: url(../images/jumbotron_992.jpg) no-repeat;
+    height: 558px;
+  }
 }
 
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
-
+  .container .jumbotron {
+    background: url(../images/jumbotron_768.jpg) no-repeat;
+    height: 432px;
+  }
 }
 
 /********** Extra small devices only **********/
@@ -152,6 +175,27 @@ body {
     margin-right: 5px; /* pour séparer le glyph du texte */
   }
 
+  #call-btn > a {
+    font-size: 1.5em;
+    display: block;
+    margin: 0 20px;
+    padding: 10px;
+    border: 2px solid #fff;
+    background-color: #f6b319;
+    color: #951c49;
+  }
+  #xs-deliver {
+    margin-top: 5px;
+    font-size: .7em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  } 
+
+  /* Stylisation de l'image "jumbotron" à cette taille */
+  .container .jumbotron {
+    margin-top: 30px;
+    padding: 0;
+  }
 }
 
 /********************************/
