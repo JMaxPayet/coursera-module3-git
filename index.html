@@ -84,6 +84,32 @@
         <img src="images/jumbotron_768.jpg" alt="Picture of restaurant" class="img-responsive visible-xs"> <!-- img-responsive est une indication Boostrap qui dit que la taille de l'image va être modifiée en fonction de la taille de l'écran ... pas vraiment faisable en "background image"-->
         <!-- Quant à visible-xs, cela indique que cette image ne sera visible qu'à cette taille (xs) d'affichage -->
       </div>
+
+      
+      <!-- Gestion des navigation tiles, les 3 menus sous le jumbotron -->
+      <!-- 3 menu tiles l'un à côté de l'autre puis 2 côte à côte et le 3è en dessous, sur la largeur des 2 du dessus... et pour finir les 3 l'un au dessous de l'autre ... comme vu sur le design fait par Mme Chaikin -->
+      <div id="home-tiles" class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <a href="menu-categories.html"><div id="menu-tile"><span>menu</span></div></a>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <a href="single-category.html"><div id="specials-tile"><span>specials</span></div></a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+
+          <!-- pour la source de la carte, aller sur Google map et chercher l'adresse du lieu.
+          Cliquer sur le menu sandwich situé à gauche de la zone de saisie/recherche... dans le menu déroulant, choisir "share or embed map"... en FR : "partager ou intégrer la carte.
+          Copier le "lien à partager" = celui sur a juste ci-dessous, puis cliquer dans l'onglet «Intégrer une carte», récupérer tout le code iframe = celui qui est ci-dessous, dans la div avec l'ID "map-tile". Ne pas oublier de modifier la width et l'height en fontion de ce qui est indiqué dans le CSS là où est stylisée ((#menu-tile, #specials-tile, #map-tile)) -->
+          <a href="https://www.google.com/maps/place/David+Chu's+China+Bistro/@39.3635874,-76.7138622,17z/data=!4m6!1m3!3m2!1s0x89c81a14e7817803:0xab20a0e99daa17ea!2sDavid+Chu's+China+Bistro!3m1!1s0x89c81a14e7817803:0xab20a0e99daa17ea" target="_blank">
+            <div id="map-tile">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.675372390488!2d-76.71386218529199!3d39.3635874269356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81a14e7817803%3A0xab20a0e99daa17ea!2sDavid+Chu&#39;s+China+Bistro!5e0!3m2!1sen!2sus!4v1452824864156" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <span>map</span>
+            </div>
+  
+          </a>
+        </div>
+      </div>
+
     </div>
  
   

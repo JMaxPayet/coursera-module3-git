@@ -93,13 +93,59 @@ body {
 
 /* ********** END OF HEADER ********** */
 
-/* Stylisation des images Jumbotron pour toutes les tailles d'écran */
 
+
+
+/* ********** BEGIN BODY OF PAGE ********** */
+/* Stylisation des images Jumbotron pour toutes les tailles d'écran */
 .container .jumbotron {
   box-shadow: 0 0 50px #3F0C1F;
   border: 2px solid #3F0C1F;
 }
 
+/* Stylisation des menu tiles */
+#menu-tile, #specials-tile, #map-tile {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative; /* pour pouvoir placer les "noms de ces tiles en absolute tout en bas de chaque tile */
+  border: 2px solid #3F0C1F;
+  overflow: hidden; /* surtout pour empêcher la map de déborder */
+}
+
+/* contour quand survol avec la souris */
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+/* Placement des images dans les tiles (menu & specials) */
+#menu-tile {
+  background: url('../images/menu-tile.jpg') no-repeat;
+  background-position: center;
+}
+#specials-tile {
+  background: url('../images/specials-tile.jpg') no-repeat;
+  background-position: center;
+}
+
+/* Stylisation des intitulés des tiles, en bas, au-dessus de l'image
+et sur fond translucide grisé */
+#menu-tile span, #specials-tile span, #map-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+
+
+
+/* *********** END BODY OF PAGE *********** */
 
 
 
@@ -195,6 +241,32 @@ body {
   .container .jumbotron {
     margin-top: 30px;
     padding: 0;
+  }
+
+  /* Stylisation des menu et special tiles afin qu'ils ne soient pas dans un cadre qu'ils ne remplissent pas complètement */
+  #menu-tile, #specials-tile {
+    width: 360px;
+    margin: 0 auto 15px;
+  }
+  /* Problème : trop large pour de très petits écran, tel que iPhone 4
+  donc on va devoir créer un media query spécifique pour ce cas. */
+}
+
+
+@media (max-width: 479px) {
+/* la width est choisie en fonction de l'apparence du nom du restaurant que l'on ne veut pas trop petit et sutout qu'il occupe presque toute la largeur */
+
+  /* Header */
+  .navbar-brand h1 { /* Restaurant name a little bit bigger*/
+    padding-top: 5px;
+    font-size: 6vw;
+  }
+  /* End Header */
+  
+  /* Home page */
+  #menu-tile, #specials-tile { /* Tile a little less large */
+    width: 280px;
+    margin: 0 auto 15px;
   }
 }
 
