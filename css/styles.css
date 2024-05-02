@@ -228,7 +228,6 @@ et sur fond translucide grisé */
   margin-bottom: 50px; /* pour séparer la mention sous le titre de l'ensemble des tiles */
 }
 
-
 /* ********** END page MENU CATEGORIES ********** */
 
 
@@ -375,6 +374,17 @@ et sur fond translucide grisé */
   #menu-tile, #specials-tile { /* Tile a little less large */
     width: 280px;
     margin: 0 auto 15px;
+  }
+
+  /* Stylisation des tiles de catégories de menus afin qu'ils se stackent les uns au-dessus des autres à cette taille d'écran */
+  /* Les "données" indiquées sont récupérées du fichier Bootstrap.css, histoire de mimer ce qu'il se passe pour col-xs-12 par exemple... A noter que le float et le width étaient à des endroits différents du reste ... on a, ici, tout regroupé ensemble */
+  .col-xxs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 100%;
   }
 }
 
