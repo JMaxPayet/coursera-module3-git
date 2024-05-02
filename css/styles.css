@@ -281,7 +281,19 @@ et sur fond translucide grisé */
     margin: 0 auto 15px;
   }
   /* Problème : trop large pour de très petits écran, tel que iPhone 4
-  donc on va devoir créer un media query spécifique pour ce cas. */
+  donc on va devoir créer un media query spécifique pour ce cas --> see below */
+
+  /* Stylisation du footer pour cette taille d'écran */
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center; /* au lieu d'être calé à gauche pour les écrans plus grands */
+  }
+  .panel-footer section:nth-child(3) {
+    margin-bottom: 0; /* margin already exists on the whole row */
+  }
+  .panel-footer section hr {
+    width: 50%; /* pour ne pas que la ligne ne fasse toute la largeur de la page */
+  }
 }
 
 
