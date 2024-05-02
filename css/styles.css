@@ -196,7 +196,6 @@ et sur fond translucide grisé */
 
 
 /* ********* BEGIN page MENU CATEGORIES ********* */
-
 .category-tile { 
   position: relative;
   border: 2px solid #3F0C1F;
@@ -227,9 +226,73 @@ et sur fond translucide grisé */
 #menu-categories-title + div { /* target the next sibling of the same parent */
   margin-bottom: 50px; /* pour séparer la mention sous le titre de l'ensemble des tiles */
 }
-
 /* ********** END page MENU CATEGORIES ********** */
 
+
+
+
+
+
+
+
+
+/* ******** BEGIN page SINGLE CATEGORIES ******** */
+.menu-item-tile {
+  margin-bottom: 25px; /* force espace en dessous pour séparer de la ligne suivante */
+}
+ 
+.menu-item-tile hr {
+  width: 80%; /* le HR qui va séparer chaque menu en petite taille quand all stacked... HR qui ne sera visible que dans cet affichage... comme indiqué dans le fichier «single-category.html» */
+}
+
+.menu-item-tile .menu-item-price { /* positionnement du prix en bas à droite */
+  font-size: 1.1em;
+  text-align: right;
+  margin-top: -15px;    /* obligé d'utiliser cela car quand on positionne le code */
+  margin-right: -15px;  /* menu (see below) alors le prix descend un peu. Ainsi il remonte */
+}
+
+.menu-item-tile .menu-item-price span {
+  font-size: .6em; /* la quantité (pint ; quart) est en police plus petite */
+}
+
+
+.menu-item-photo {   /* stylisation des photos */
+  position: relative;
+  border: 2px solid #3F0C1F; 
+  overflow: hidden;
+  padding: 0;
+  margin-right: -15px;
+  margin-left: auto;
+  margin-bottom: 20px;
+  max-width: 250px; /* pour matcher la taille des photos telles que définie dans le html */
+}
+
+.menu-item-photo div {  /* positionnement du code menu en bas à droite sur la photo */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  background-color: #557c3e;
+  text-align: center;
+  opacity: .8;
+}
+
+.menu-item-description {
+  padding-right: 30px; /* permet de mieux séparer chaque description de la photo qui est à sa droite... ou de l'éloigner du bord droit, si c'est celle de droite */
+}
+
+h3.menu-item-title {
+  margin: 0 0 10px; /* supprime la margin-top héritée, supprime à droite et à gauche aussi et met 10px en margin-bottom:  */
+}
+
+.menu-item-details {
+  font-size: .9em;
+  font-style: italic;
+}
+
+
+/* ********* END page SINGLE CATEGORIES ********* */
 
 
 
@@ -356,6 +419,19 @@ et sur fond translucide grisé */
 
   .panel-footer section hr {
     width: 50%; /* pour ne pas que la ligne ne fasse toute la largeur de la page */
+  }
+
+  /* Stylisation des single menu items (photos + descriptions) pour les centrer à cette taille d'écran, sinon c'est le souk ... et tout est aligné à droite à cause de la classe .menu-item-photo qui stylise ces éléments et qui a une margin-right à -15px et une margin-left à auto ... si on met la margin-right à auto ça va centrer */
+  .menu-item-photo {
+    margin-right: auto;
+  }
+   
+  .menu-item-tile .menu-item-price {
+    text-align: center; /* va centrer le prix qui était calé à droite, lui aussi */
+  }
+  
+  .menu-item-description {
+    text-align: center; /* va centrer la description */
   }
 }
 
