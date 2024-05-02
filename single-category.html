@@ -87,93 +87,35 @@
     <!-- Main content -->
     
     <div id="main-content" class="container">
-      <h2 id="menu-categories-title" class="text-center">Menu Categories</h2>
+      <h2 id="menu-categories-title" class="text-center">Lunch Menu</h2>
       <!-- text-center is a pre-defined/pre-styled Boostrap class -->
       <div class="text-center">
-        Substituting white rice with brown rice or fried rice after 3:00pm will be $1.50 for a pint and $2.50 for a quart.
+        Lunch is not served after 1pm.
       </div>
 
+      <!-- Mise en place des tiles + description des menus, sous forme de grid, sur 2 colonnes, l'une avec 1 image et à sa droite un texte & idem pour l'autre  -->
+      <!-- Vu qu'on est déjà dans un "container", on a besoin d'un "row", d'où la classe de la
+        section à laquelle on applique cette classe -->
 
-      <!-- Mise en place des tiles de catégories de menus, sous forme de grid, évidemment -->
-      <!-- Vu qu'on est déjà dans un "container", on a besoin d'un "row", d'où la classe
-        de la section à laquelle on applique cette classe -->
       <section class="row">
-        <!-- Initialement il était prévu 6 catégories par ligne, mais comme elles font 200px
-          de large ça va coincer sur une largeur de page de 1200 à moins...
-          donc au lieu de cela on va passer à 4 catégories par ligne... d'où le col-md-3 -->
-        <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-          <a href="single-category.html"> <!-- page de destination à changer pour pointer sur la bonne catégorie... en javascript ?? -->
-            <div class="category-tile">
-              <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-              <span>Lunch</span>
+        <div class="menu-item-tile col-md-6">
+          <div class="row"> <!-- Obligé d'avoir un autre row pour subdiviser image à gauche et texte de description à droite -->
+            <div class="col-sm-5"> <!-- photo moins large que texte de description (sur 7 colonnes) -->
+              <div class="menu-item-photo">
+                <div>D01</div> <!-- code venant du menu du restaurant -->
+                <img class="img-responsive" width="250" height="150" src="images/menu/B/B-1.jpg" alt="Item"> <!-- à nouveau on utilise la classe img-responsive de Boostrap pour permettre à l'image de stretch en fontion de la taille de la fenêtre -->
+              </div>
+              <div class="menu-item-price">$10.95<span> (pint)</span> $14.95 <span>(quart)</span></div>
             </div>
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-          <a href="single-category.html">
-            <div class="category-tile">
-              <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-              <span>Lunch</span>
+            <div class="menu-item-description col-sm-7"> <!-- plus grand que photo : sur 5 colonnes -->
+              <h3 class="menu-item-title">Veal with Mixed Vegetables</h3>
+              <p class="menu-item-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque inventore esse minima incidunt impedit. Asperiores, voluptatem. Sint aspernatur provident, rem odio dolorem eaque voluptatibus modi reprehenderit minima, itaque cupiditate totam.Asperiores, voluptatem. Sint aspernatur provident, rem odio dolorem eaque voluptatibus modi reprehenderit minima, itaque cupiditate totam.Asperiores, voluptatem. Sint aspernatur provident, rem odio dolorem eaque voluptatibus modi reprehenderit minima, itaque cupiditate totam.</p>
             </div>
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-          <a href="single-category.html">
-            <div class="category-tile">
-              <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-              <span>Lunch</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-          <a href="single-category.html">
-            <div class="category-tile">
-              <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-              <span>Lunch</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-          <a href="single-category.html">
-            <div class="category-tile">
-              <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-              <span>Lunch</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-          <a href="single-category.html">
-            <div class="category-tile">
-              <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-              <span>Lunch</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-          <a href="single-category.html">
-            <div class="category-tile">
-              <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-              <span>Lunch</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-          <a href="single-category.html">
-            <div class="category-tile">
-              <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-              <span>Lunch</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-          <a href="single-category.html">
-            <div class="category-tile">
-              <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-              <span>Lunch</span>
-            </div>
-          </a>
+          </div>
+          <hr class="visible-xs"> <!-- usage de cette classe Bootstrap pour avoir une ligne qui ne sera visible que sur petits écrans, quand tout est stacké les uns au-dessus des autres -->
         </div>
       </section>
+      
 
 
     </div> <!-- end of #main-content -->
