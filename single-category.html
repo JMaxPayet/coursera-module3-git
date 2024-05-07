@@ -42,6 +42,13 @@
 
           <div id="collapsable-nav" class="collapse navbar-collapse">
             <ul id="nav-list" class="nav navbar-nav navbar-right">
+              <!-- Ajout d'un élément permettant de retourner à la home page, UNIQUEMENT dans le dropdown menu
+              Pour cela on va ajouter un élément ici, mais avec indication qu'il ne sera visible (actif),
+              que dans le mode mobile (visible-xs) -->
+              <li class="visible-xs"> <!-- on a enlevé le "active" ici, puisqu'on est plus sur la home page -->
+                <a href="index.html">
+                  <span class="glyphicon glyphicon-home"></span> Home</a>
+              </li>
              <li class="active"> <!-- classe de Boostrap qui mime le hover -->
                <a href="menu-categories.html">
                  <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
