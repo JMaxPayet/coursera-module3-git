@@ -20,7 +20,6 @@ body {
 
 
 
-
 /* ********** BEGINNING OF HEADER ********** */
 #header-nav {
   background-color: var(--header-bg-color);
@@ -56,9 +55,6 @@ body {
 }
 
 #nav-list a {
-  /********************************************************************/
-  /***** MASQUER SI MENU DOIT ETRE MASQUÉ ET ONLY SANDWICH VISIBLE *****/
-  /********************************************************************/
   color: var(--brand-name-color);
   text-align: center;
   font-size: 1.5em;
@@ -83,77 +79,32 @@ body {
 
 
 
-/* ******** BEGIN MAIN CONTENT OF MAIN PAGE ******** */
-#menu-title {
+/* ************* BEGIN MAIN CONTENT ************* */
+#menu-title {                                                /* Our menu */
   color: var(--brand-name-color);
   font-size: 1.8em;
   font-weight: bold;
   padding-bottom: 20px;
 }
 
-h3, .to-ungraded-version {
+h3 {                                                 /* sous titre sous Our Menu */
   color: var(--brand-name-color);
   text-align: center;
-  font-size: 1em;
-  margin-top: 55px;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding-top: 15px;
 }
 
-.to-ungraded-version:hover, .to-ungraded-version:focus {
-  color: var(--main-theme-color);
-  background-color: var(--brand-name-color);
-  text-decoration: none;
-}
-
-.container .dummytext {
-  width: 98%;
-  padding: 10px;
-  margin-left: 5px;
-  margin-right: 5px;
+.tile-wrapper div {
+  margin: 15px;
   text-align: justify;
-  line-height: 1.5em;
-  background-color: var(--main-theme-color);
-}
-/* ************************************************ */
-
-
-
-
-
-/* ******** Chicken/Beef/Sushi Menu Page ******** */
-.menu-row {
-  background-color: var(--main-theme-color);
-  padding-bottom: 35px;
-} 
-
-.menu-row p {
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 10px;
-  font-size: 1.4em;
-  font-weight: bold;
-  color: var(--brand-name-color);
+  padding-bottom: 15px;
 }
 
-.panel-footer {
-  margin-top: 50px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: var(--header-bg-color);
-  color: var(--brand-name-color);
+.tile-wrapper {
+  background: var(--main-theme-color);
 }
 
-.panel-footer > div > p {
-  color: var(--brand-name-color);
-  font-weight: bold;
-  font-size: 1em;
-}
-
-.panel-footer > div > p > a {
-  color: var(--main-theme-color);
-  background-color: var(--brand-name-color);
-  font-weight: 100;
-  font-size: 1em;
-}
 
 /* ********************************************** */
 
@@ -171,24 +122,15 @@ h3, .to-ungraded-version {
 
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
-  img {
-    width: 280px;
-    height: auto;
-  }
 }
 
 
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
-  img {
-    width: 330px;
-    height: auto;
-  }
 }
 
 
 /********** Extra small devices only **********/
-/* apparition menu sandwich */
 @media (max-width: 767px) {
   .navbar-brand {
     padding-top: 10px;
@@ -211,11 +153,6 @@ h3, .to-ungraded-version {
 
   .navbar-toggle .icon-bar {
     border: 1px solid var(--brand-name-color);
-  }
-
-  .menu-row {
-    margin-right: 2%;
-    margin-left: 2%;
   }
 }
 
