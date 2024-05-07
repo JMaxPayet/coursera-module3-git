@@ -256,7 +256,6 @@ et sur fond translucide grisé */
   font-size: .6em; /* la quantité (pint ; quart) est en police plus petite */
 }
 
-
 .menu-item-photo {   /* stylisation des photos */
   position: relative;
   border: 2px solid #3F0C1F; 
@@ -291,6 +290,19 @@ h3.menu-item-title {
   font-style: italic;
 }
 
+
+/*************************************************************************************************/
+/* Gestion du cas où texte de description assez grand pour déborder sur l'élément juste en dessous.
+
+Va falloir utiliser un "clear" probablement --> voir doc Bootstrap sur le "Grid system" à la
+partie "Responsive column reset". Il y est indiqué d'ajouter une div spéciale qui ne sera PAS
+visible en "mobile view" (XS) puisqu'à ce mode le problème n'a pas lieu (tout est stacké)...
+Il s'agit donc d'ajouter la div
+              «« <div class="clearfix visible-lg-block visible-md-block"> »»
+après chaque deuxième div de notre liste. Sachant que, ici, cette div est "modifiée" pour ne
+s'appliquer qu'aux mode LG et MD puisque c'est dans ces deux modes (pas le XS) que le soucis
+apparaît */
+/*************************************************************************************************/
 
 /* ********* END page SINGLE CATEGORIES ********* */
 
